@@ -9,7 +9,7 @@ let router = express.Router();
 const storage = multer.diskStorage({
 
     destination: function(req, file, cb) {
-        // console.log(">>> check:", appRoot)
+        console.log(">>> check:", file)
         cb(null,appRoot + '/src/public/image/');
     },
     // By default, multer removes file extensions so let's add them back

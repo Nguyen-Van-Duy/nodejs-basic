@@ -23,7 +23,8 @@ let handleUploadProfile = async (req, res, next) => {
         // }
 
         // Display uploaded image for user validation
-        res.send(`You have uploaded this image: <hr/><img src="/image/${req.file.filename}" width="500"><hr /><a href="./">Upload another image</a>`);
+        res.json({image: `image/${req.file.filename}`})
+        // res.send(`You have uploaded this image: <hr/><img src="/image/${req.file.filename}" width="500"><hr /><a href="./">Upload another image</a>`);
 }
 
 
